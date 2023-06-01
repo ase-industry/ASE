@@ -7,6 +7,7 @@
 
 
     "content-hash": "693150c96b67d4a5f62df8bc9c851433",
+
     "packages": [
         {
             "name": "api-platform/core",
