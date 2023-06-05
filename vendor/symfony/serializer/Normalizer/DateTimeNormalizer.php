@@ -83,9 +83,6 @@ class DateTimeNormalizer implements NormalizerInterface, DenormalizerInterface, 
         $dateTimeFormat = $context[self::FORMAT_KEY] ?? null;
         $timezone = $this->getTimezone($context);
 
-<<<<<<< HEAD
-        if (null === $data || !\is_string($data) || '' === trim($data)) {
-=======
         if (\is_int($data) || \is_float($data)) {
             switch ($dateTimeFormat) {
                 case 'U': $data = sprintf('%d', $data); break;
@@ -94,7 +91,6 @@ class DateTimeNormalizer implements NormalizerInterface, DenormalizerInterface, 
         }
 
         if (!\is_string($data) || '' === trim($data)) {
->>>>>>> origin/master
             throw NotNormalizableValueException::createForUnexpectedDataType('The data is either not an string, an empty string, or null; you should pass a string that can be parsed with the passed format or a valid DateTime string.', $data, [Type::BUILTIN_TYPE_STRING], $context['deserialization_path'] ?? null, true);
         }
 
